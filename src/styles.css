@@ -1,0 +1,40 @@
+
+/* custom class for the image container */
+.img-container {
+  display:flex;
+  flex-direction:column;
+}
+
+/* cstyle the image at the bottom of the container in repsponsive design */
+.img-container{
+  order:2;  /* order the image to the bottom of the container */
+}
+
+/* media query for screens larger than 768px */
+@media screen and (min-width: 768px) {
+  /* set the flax direction to row in mobile view */
+  .img-container {
+    flex-direction:row;
+    align-items: flex-end;
+  }
+  .img-container img {
+    order:1;  /* order the image to the bottom of the container */
+  }
+  .img-container p {
+    order:2;  /* order the image to the bottom of the container */
+}
+  
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animate-slide-from-left {
+  animation: slideFromLeft 1s ease-in-out 0s 1 normal forwards;
+}
+
+
