@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HeroContact from '../components/HeroContact'
@@ -25,9 +25,15 @@ const Contact = () => {
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState(null)
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false)
-
+  const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
+  const testKey =  '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
+  console.log(REACT_APP_RECAPTCHA_API_KEY_14082023 + 'test' + apiKey + 'test2' + testKey) 
 
   //-----------------Functions-----------------//
+
+
+  const captchaRef = useRef(null);
+
 
   const handleCaptchaVerify = (value) => { 
     setIsCaptchaVerified(!!value)
@@ -36,6 +42,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    const token = captchaRef.current.getValue();
+    captchaRef.current.reset();
+
+    
 
     const {name, email, message} = formData
     const subject = `New message from ${name}`
@@ -140,8 +151,10 @@ alert('There was an error sending the message')
       <ScrollLink to="contact" smooth={true} duration={1000} />
       <div className="h-[650px]  bg-slate-50 w-full ">
         <form
+          action="https://formsubmit.co/e041553a387c94fe9f47c33d3408a223"
+          method="POST"
           className="flex flex-col items-center  w-full pt-20"
-          onSubmit={handleSubmit}
+          //onSubmit={handleSubmit}
         >
           <div
             className={`mb-4  ${
@@ -192,6 +205,7 @@ alert('There was an error sending the message')
               Message:
             </label>
             <textarea
+              type="text"
               name="message"
               id="message"
               value={formData.message}
@@ -202,12 +216,13 @@ alert('There was an error sending the message')
               required
             />
           </div>
-          <ReCAPTCHA
-            className="mb-4"
-            sitekey={REACT_APP_RECAPTCHA_API_KEY_14082023}
-            onChange={handleCaptchaVerify}
+          <input type="hidden" name="_captcha" value="true" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thank you for your message. We will get back to you shortly"
           />
-
+          <input type="hidden" name="_template" value="table" />
           <button
             type="submit"
             className="px-28 py-2 text-[#81cdba] bg-[#606161] rounded-md hover:bg-[#81cdba] hover:text-[#606161] focus:outline-none focus:bg-[#606161] focus:text-[#81cdba] lg:px-64 lg:py-3 w-[300px] lg:w-[650px] sm:w-[400px]"

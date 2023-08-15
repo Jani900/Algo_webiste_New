@@ -17,3 +17,6 @@
 4. docker load -i /tmp/algotech-r.tar
 
 5. sh /usr/local/bin/init_docker/init_algotech-r.sh
+
+packages json changes 
+// "start": "react-scripts start",
