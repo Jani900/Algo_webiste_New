@@ -10,8 +10,19 @@ import { Link as ScrollLink } from 'react-scroll'
 const Contact = () => {
 
   
-      const { REACT_APP_RECAPTCHA_API_KEY_14082023 } = process.env;
-
+        const { REACT_APP_RECAPTCHA_API_KEY_14082023 } = process.env;
+        const [loading, setLoading] = useState(false);
+        const [response, setResponse] = useState(null);
+        const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+        const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
+        const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+        console.log(
+          REACT_APP_RECAPTCHA_API_KEY_14082023 +
+            "test" +
+            apiKey +
+            "test2" +
+            testKey
+        ); 
 
   
 
@@ -22,12 +33,7 @@ const Contact = () => {
     email: '',
     message: ''
   })
-  const [loading, setLoading] = useState(false)
-  const [response, setResponse] = useState(null)
-  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false)
-  const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
-  const testKey =  '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
-  console.log(REACT_APP_RECAPTCHA_API_KEY_14082023 + 'test' + apiKey + 'test2' + testKey) 
+
 
   //-----------------Functions-----------------//
 
@@ -89,6 +95,8 @@ alert('There was an error sending the message')
 
   const handleFocus = (e) => {
     setFocusField(e.target.name)
+    setFocusField(e.target.email)
+    setFocusField(e.target.message)
   }
   const handleBlur = () => {
     setFocusField(null)
@@ -100,10 +108,12 @@ alert('There was an error sending the message')
 
 
   const handleChange = (e) => {
-    const {name, value} = e.target
+    const {name,email,message, value} = e.target
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
+      [email]: value,
+      [message]: value
     }))
   }
 
@@ -151,10 +161,10 @@ alert('There was an error sending the message')
       <ScrollLink to="contact" smooth={true} duration={1000} />
       <div className="h-[650px]  bg-slate-50 w-full ">
         <form
-          action="https://formsubmit.co/e041553a387c94fe9f47c33d3408a223"
+          action="https://formsubmit.co/jani@algotech"
           method="POST"
           className="flex flex-col items-center  w-full pt-20"
-          //onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           <div
             className={`mb-4  ${
@@ -171,7 +181,6 @@ alert('There was an error sending the message')
               type="text"
               name="name"
               id="name"
-              value={formData.name}
               onChange={handleChange}
               onFocus={() => handleFocus("name")}
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
@@ -190,8 +199,8 @@ alert('There was an error sending the message')
               type="email"
               name="email"
               id="email"
-              value={formData.email}
               onChange={handleChange}
+              onFocus={() => handleFocus("email")}
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
              w-[300px] lg:w-[650px] sm:w-[400px]"
               required
@@ -208,8 +217,8 @@ alert('There was an error sending the message')
               type="text"
               name="message"
               id="message"
-              value={formData.message}
               onChange={handleChange}
+              onFocus={() => handleFocus("message")}
               rows="5"
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
               w-[300px] lg:w-[650px] sm:w-[400px]"
@@ -221,8 +230,17 @@ alert('There was an error sending the message')
             type="hidden"
             name="_autoresponse"
             value="Thank you for your message. We will get back to you shortly"
+            className='mb-4'
           />
           <input type="hidden" name="_template" value="table" />
+            <ReCAPTCHA
+            className='mb-4'
+              ref={captchaRef}
+              sitekey={testKey}
+              onChange={handleCaptchaVerify}
+             
+              />
+
           <button
             type="submit"
             className="px-28 py-2 text-[#81cdba] bg-[#606161] rounded-md hover:bg-[#81cdba] hover:text-[#606161] focus:outline-none focus:bg-[#606161] focus:text-[#81cdba] lg:px-64 lg:py-3 w-[300px] lg:w-[650px] sm:w-[400px]"

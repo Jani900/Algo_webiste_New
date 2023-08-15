@@ -64,7 +64,9 @@ const isDesktop = windowWidth > 1250;
             className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
             data-aos="flip-right"
           >
-            <Link to="/contact">Enquire now</Link>
+            <Link to="/contact" href="#name">
+              Enquire now
+            </Link>
           </button>
         </div>
       </div>
@@ -97,7 +99,9 @@ const isDesktop = windowWidth > 1250;
               className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
               data-aos="flip-right"
             >
-              <Link to="/contact">Enquire now</Link>
+              <Link to="/contact" href="#name">
+                Enquire now
+              </Link>
             </button>
           </div>
 
@@ -140,8 +144,13 @@ const isDesktop = windowWidth > 1250;
               small-scale gems to grand online solutions. Partner with us for
               expert guidance and ongoing support on your digital journey."
             </p>
-            <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 " data-aos='flip-right'>
-              <Link to="/contact">Enquire now</Link>
+            <button
+              className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
+              data-aos="flip-right"
+            >
+              <Link to="/contact" href="#name">
+                Enquire now
+              </Link>
             </button>
           </div>
         </div>
@@ -175,8 +184,13 @@ const isDesktop = windowWidth > 1250;
             empower seamless navigation and location-based services. Discover a
             world of possibilities with our GPS expertise and ongoing support."
           </p>
-          <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 " data-aos="flip-right">
-            <Link to="/contact">Enquire now</Link>
+          <button
+            className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
+            data-aos="flip-right"
+          >
+            <Link to="/contact" href="#name">
+              Enquire now
+            </Link>
           </button>
         </div>
       </div>
