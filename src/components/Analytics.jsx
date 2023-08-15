@@ -52,7 +52,7 @@ const isDesktop = windowWidth > 1250;
           <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
             Manage your business Centrally from one place
           </h1>
-          <p data-aos="fade-up">
+          <p data-aos="fade-right">
             "Discover the perfect CRM solution for your business with our IT
             company's expertise. We create cutting-edge CRM Systems that are
             tailored to your unique needs, delivering affordability without
@@ -62,7 +62,7 @@ const isDesktop = windowWidth > 1250;
           </p>
           <button
             className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-            data-aos="flip-rite"
+            data-aos="flip-right"
           >
             <Link to="/contact">Enquire now</Link>
           </button>
@@ -86,7 +86,7 @@ const isDesktop = windowWidth > 1250;
             <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
               Empowering Digitel Success
             </h1>
-            <p data-aos="fade-up">
+            <p data-aos="fade-right">
               "Transforming Visions into Reality: Your One-Stop Destination for
               Dynamic Websites, E-commerce Platforms, and Comprehensive Online
               Services. Experience top-tier software development, from
@@ -95,7 +95,7 @@ const isDesktop = windowWidth > 1250;
             </p>
             <button
               className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-              data-aos="flip-rite"
+              data-aos="flip-right"
             >
               <Link to="/contact">Enquire now</Link>
             </button>
@@ -133,14 +133,14 @@ const isDesktop = windowWidth > 1250;
             <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
               Empowering Digitel Success
             </h1>
-            <p data-aos="fade-up">
+            <p data-aos="fade-right">
               "Transforming Visions into Reality: Your One-Stop Destination for
               Dynamic Websites, E-commerce Platforms, and Comprehensive Online
               Services. Experience top-tier software development, from
               small-scale gems to grand online solutions. Partner with us for
               expert guidance and ongoing support on your digital journey."
             </p>
-            <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 ">
+            <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 " data-aos='flip-right'>
               <Link to="/contact">Enquire now</Link>
             </button>
           </div>
@@ -169,13 +169,13 @@ const isDesktop = windowWidth > 1250;
           <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
             Manage your business Fleet with GPS
           </h1>
-          <p data-aos="fade-up">
+          <p data-aos="fade-right">
             "Navigate Beyond Boundaries: Unleashing the Potential of GPS
             Systems. From cutting-edge GPS technology to tailored solutions, we
             empower seamless navigation and location-based services. Discover a
             world of possibilities with our GPS expertise and ongoing support."
           </p>
-          <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 ">
+          <button className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 " data-aos="flip-right">
             <Link to="/contact">Enquire now</Link>
           </button>
         </div>

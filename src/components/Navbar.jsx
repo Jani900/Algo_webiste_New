@@ -6,17 +6,27 @@ import Logo from '../assets/algo_transparent2png.png'
 import {Link,useMatch,useResolvedPath} from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { data } from 'autoprefixer';
 
 const Navbar = () => {
 
-useEffect(() => {
-  Aos.init({duration: 2000});
-}, []);
+  const [nav , setNav] = useState(false);
 
-  const [nav, setNav] = useState(false);
+useEffect(() => {
+  if (nav){
+  Aos.init({duration: 3000});
+  Aos.refresh();
+  }
+}, [nav]);
+
+
+
 
   const handleNav = () => {
     setNav(!nav);
+    if (nav) {
+      Aos.refresh();
+    }
   };
 
 
@@ -26,7 +36,7 @@ useEffect(() => {
         <img src={Logo} alt="Algotech logo" />
       </div>
 
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex" data-aos="fade-right">
         <CustomLink to="/" className="p-4  hover:text-[#81cdba]">
           Home
         </CustomLink>
@@ -45,7 +55,10 @@ useEffect(() => {
         {nav ? (
           <AiOutlineClose size={30} color="#81cdba" />
         ) : (
-          <AiOutlineMenu size={30} color="#81cdba" />
+          <AiOutlineMenu
+            size={30}
+            color="#81cdba"
+          />
         )}
       </button>
 
@@ -59,25 +72,29 @@ useEffect(() => {
         <CustomLink
           to="/"
           className="flex justify-center p-6 border-b  hover:text-[#81cdba]"
-         
+          data-aos={nav ? "fade-up" : ""}
         >
           Home
         </CustomLink>
+
         <CustomLink
           to="/company"
           className="flex justify-center p-6 border-b  hover:text-[#81cdba]"
+          data-aos={nav ? "fade-up" : ""}
         >
           Company
         </CustomLink>
         <CustomLink
           to="/resources"
           className="flex justify-center p-6 border-b hover:text-[#81cdba]"
+          data-aos={nav ? "fade-up" : ""}
         >
           Resources
         </CustomLink>
         <CustomLink
           to="/contact"
           className="flex p-6 justify-center border-b hover:text-[#81cdba]"
+          data-aos={nav ? "fade-up" : ""}
         >
           Contact
         </CustomLink>

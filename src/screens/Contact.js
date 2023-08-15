@@ -9,11 +9,11 @@ import { Link as ScrollLink } from 'react-scroll'
 
 const Contact = () => {
 
-   const {
-     REACT_APP_RECAPTCHA_SITE_KEY_TEST } = process.env;
-console.log("keytag Contact " + REACT_APP_RECAPTCHA_SITE_KEY_TEST);
+  
+      const { REACT_APP_RECAPTCHA_API_KEY_14082023 } = process.env;
 
-   const { REACT_APP_RECAPTCHA_SECRET_KEY } = process.env;
+
+  
 
   //-----------------States-----------------//
   const [focusedField, setFocusField] = useState(null)
@@ -106,7 +106,7 @@ alert('There was an error sending the message')
       <HeroContact />
 
       <div className="grid lg:flex  text-black justify-center pt-5 bg-slate-50 w-full lg:pb-20 pb:10 ">
-        <div className="grid-cols-1 lg:flex justify-center w-full  ">
+        <div className="grid-cols-1 md:flex lg:flex justify-center w-full  ">
           <div
             className="flex py-10 md:py-0 justify-center md:pt-20"
             onClick={handlePhoneClick}
@@ -144,13 +144,13 @@ alert('There was an error sending the message')
           onSubmit={handleSubmit}
         >
           <div
-            className={`mb-4 ${
+            className={`mb-4  ${
               isFieldFocused("name") ? "border-[#81cdba]" : ""
             }`}
           >
             <label
               htmlFor="name"
-              className="lg:w-[650px] sm:w-[400px] block mb-1 font-semibold"
+              className="lg:w-[650px] block mb-1 font-semibold"
             >
               Name:
             </label>
@@ -161,8 +161,8 @@ alert('There was an error sending the message')
               value={formData.name}
               onChange={handleChange}
               onFocus={() => handleFocus("name")}
-              className="w-full px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
-              "
+              className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
+              w-[300px] lg:w-[650px] sm:w-[400px]"
               required
             />
           </div>
@@ -179,8 +179,8 @@ alert('There was an error sending the message')
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
-             "
+              className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
+             w-[300px] lg:w-[650px] sm:w-[400px]"
               required
             />
           </div>
@@ -197,21 +197,20 @@ alert('There was an error sending the message')
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              className="w-full px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
-              "
+              className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
+              w-[300px] lg:w-[650px] sm:w-[400px]"
               required
             />
           </div>
-
           <ReCAPTCHA
             className="mb-4"
-            sitekey={REACT_APP_RECAPTCHA_SITE_KEY_TEST}
+            sitekey={REACT_APP_RECAPTCHA_API_KEY_14082023}
             onChange={handleCaptchaVerify}
           />
 
           <button
             type="submit"
-            className="px-28 py-2 text-[#81cdba] bg-[#606161] rounded-md hover:bg-[#81cdba] hover:text-[#606161] focus:outline-none focus:bg-[#606161] focus:text-[#81cdba] lg:px-64 lg:py-3"
+            className="px-28 py-2 text-[#81cdba] bg-[#606161] rounded-md hover:bg-[#81cdba] hover:text-[#606161] focus:outline-none focus:bg-[#606161] focus:text-[#81cdba] lg:px-64 lg:py-3 w-[300px] lg:w-[650px] sm:w-[400px]"
           >
             Submit
           </button>

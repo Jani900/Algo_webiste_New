@@ -23,9 +23,7 @@ useEffect(() =>{
       for (let i = 0; i < 5; i++) {
         const rItem = response.data.results[i];
         newArticlesArray.push(rItem);
-        console.log(
-          log_tag + ".useEffect--rItem = " + JSON.stringify(rItem, null, 4)
-        );
+   
       }
       setArticles(newArticlesArray);
 

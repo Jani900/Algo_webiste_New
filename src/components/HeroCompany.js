@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../assets/IT_computer_Dev.mp4'
+// import Banner from '../assets/IT_computer_Dev.mp4'
 import Typed from 'react-typed'
-import HeroBanner from "../assets/connection_concept.jpg";
+import HeroBanner from "../assets/compressedCompanyPic.jpeg";
 
 const HeroCompany = () => {
 
@@ -13,10 +13,10 @@ const HeroCompany = () => {
     <div className="  lg:h-full grid w-full ">
       {isDesktop && (
         <div className="relative  w-full  ">
-          <div className=" relative md:align-middle lg:text-center text-center ">
+          <div className=" relative md:align-middle lg:text-center text-center h-full ">
             <div className=" absolute flex justify-center max-h-full w-full">
               <div className=" lg:text-7xl sm:text-6xl text-3xl font-bold align-middle   text-white ">
-                <div className="w-full">
+                <div className="w-full lg:mt-14">
                   <Typed
                     className=" text-center w-full xs:text-4xl md:text-3xl font-bold lg:text-5xl text-white text-3xl font-serif md:pb-10"
                     strings={['" Your Vision, Our Technological  Skills "']}
@@ -34,8 +34,7 @@ const HeroCompany = () => {
                   src={HeroBanner}
                   alt="contact us"
                 />
-                <div className="absolute inset-0 bg-black opacity-30"></div>{" "}
-                {/* Overlay */}
+              
               </div>
             </div>
           </div>

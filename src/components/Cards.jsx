@@ -13,7 +13,7 @@ const Cards = () => {
   return (
     <div className="w-full py-[10rem] px-4 bg-white">
       {/* <ScrollLink to="pricing" smooth={true} duration={1000}> */}
-        <h1 className="text-4xl font-bold text-center mb-16 text-gray-600">
+        <h1 className="text-4xl font-bold text-center mb-16 text-gray-600" id="price">
           Current Plans
         </h1>
 

@@ -49,17 +49,17 @@ const Footer = () => {
         <div>
           <h6 className="font-medium text-gray-400">Solutions</h6>
           <ul>
-            <Link to={"/"}>
+            <Link to={"/"} href="#analytics">
               <li className="py-2 text-sm" target="/" rel="noopener noreferrer">
                 Analytics
               </li>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} href="#crm">
               <li className="py-2 text-sm" target="/" rel="noopener noreferrer">
                 CRM
               </li>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} href="#gps">
               <li className="py-2 text-sm" target="/" rel="noopener noreferrer">
                 GPS Monitoring
               </li>
@@ -74,7 +74,7 @@ const Footer = () => {
         <div>
           <h6 className="font-medium text-gray-400">Support</h6>
           <ul>
-            <Link to={"/"}>
+            <Link to={"/"} href="#price">
               <li className="py-2 text-sm">Pricing</li>
             </Link>
             <Link to={"/resources"}>
@@ -88,10 +88,10 @@ const Footer = () => {
         <div>
           <h6 className="font-medium text-gray-400">Company</h6>
           <ul>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Jobs</li>
             </Link>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Careers</li>
             </Link>
           </ul>
@@ -99,13 +99,13 @@ const Footer = () => {
         <div>
           <h6 className="font-medium text-gray-400">Legal</h6>
           <ul>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Claim</li>
             </Link>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Policy</li>
             </Link>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Terms</li>
             </Link>
           </ul>

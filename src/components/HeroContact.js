@@ -1,6 +1,6 @@
 import React from 'react'
 import Typed from 'react-typed'
-import ContactUs from '../assets/contactUs.jpg'
+import ContactUs from '../assets/contactBanner_Pic.jpeg'
 
 
 function HeroContact() {
