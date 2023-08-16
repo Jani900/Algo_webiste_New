@@ -16,6 +16,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
   const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
+  const apiKey1 = "6Ley2V4nAAAAAIKkIbOuufA2wITVjJX5ccGPez71";
   const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
   const serviceID = "service_sddgyff";
   const templateID = "template_1hwr7zs";
