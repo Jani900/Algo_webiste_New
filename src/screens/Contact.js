@@ -15,12 +15,16 @@ const Contact = () => {
   const captchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
-  const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
-  const apiKey1 = "6Ley2V4nAAAAAIKkIbOuufA2wITVjJX5ccGPez71";
-  const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  // const apiKey = "6Lfh4KQnAAAAAHKam4Or_IXDQGkvXxDI4L_jBGC3";
+  // const apiKey1 = "6Ley2V4nAAAAAIKkIbOuufA2wITVjJX5ccGPez71";
+  // const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
   const serviceID = "service_sddgyff";
   const templateID = "template_1hwr7zs";
   const userID = "IJX4Qp4huwoVFCpsN";
+
+  const DEF_SITEKKEY_PRODUCT = process.env.REACT_APP_RECAPTCHA_API_KEY_17082023;
+  const DEF_SITEKEY_DEBUG = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const DEF_SECRETKEY_DEBUG = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
  
 
   const [focusedField, setFocusField] = useState(null);
@@ -145,7 +149,7 @@ const Contact = () => {
       <div className="h-[650px]  bg-slate-50 w-full ">
         <form
           key={formData}
-          ref={form} 
+          ref={form}
           className="flex flex-col items-center  w-full pt-20"
           onSubmit={handleSubmit}
         >
@@ -168,7 +172,9 @@ const Contact = () => {
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
               w-[300px] lg:w-[650px] sm:w-[400px]"
               required
-              onChange={(e) => {setName1(e.target.value)}}
+              onChange={(e) => {
+                setName1(e.target.value);
+              }}
             />
           </div>
           <div className="mb-4">
@@ -185,7 +191,9 @@ const Contact = () => {
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
              w-[300px] lg:w-[650px] sm:w-[400px]"
               required
-              onChange={(e) => {setEmail1(e.target.value)}}
+              onChange={(e) => {
+                setEmail1(e.target.value);
+              }}
               value={email1}
             />
           </div>
@@ -204,15 +212,17 @@ const Contact = () => {
               className=" px-4 py-2 border border-[#606161] rounded-md focus:outline-none focus:ring-2 focus:ring-[#81cdba] focus:border-transparent
               w-[300px] lg:w-[650px] sm:w-[400px]"
               required
-              onChange={(e) => {setMessage1(e.target.value)}}
+              onChange={(e) => {
+                setMessage1(e.target.value);
+              }}
               value={message1}
             />
           </div>
-        
+
           <ReCAPTCHA
             className="mb-4"
             ref={captchaRef}
-            sitekey={apiKey}
+        sitekey={ DEF_SITEKKEY_PRODUCT }
             onChange={handleCaptchaVerify}
           />
 

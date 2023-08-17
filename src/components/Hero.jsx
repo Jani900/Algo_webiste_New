@@ -17,6 +17,8 @@ const isDesktop = windowWidth >= 1440;
         <div className="relative flex justify-center min-w-full lg:self-center ">
           <div className=" min-w-full lg:self-center ">
             <div style={{ maxHeight: "700px", overflow: "hidden" }}>
+          
+
               <video
                 className=" lg:w-full w-full  "
                 src={Banner}
@@ -26,6 +28,7 @@ const isDesktop = windowWidth >= 1440;
                 autoPlay="autoplay"
                 loop
               ></video>
+    
             </div>
           </div>
           <div className="absolute inset-0 bg-black opacity-30"></div>{" "}
