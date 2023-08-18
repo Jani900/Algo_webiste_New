@@ -5,8 +5,8 @@ import React from 'react'
 const NewsItem = ({pusblishedDate,title,url,urlToImage,description}) => {
 
     const trimDescription = (description, maxWords) => {
-      const words = description.split(" ");
-      if (words.length > maxWords) {
+      const words = description?.split(" ");
+      if (words?.length > maxWords) {
         return words.slice(0, maxWords).join(" ") + "...";
       }
       return description;

@@ -18,25 +18,33 @@ useEffect(() =>{
   const getArticles = async () => {
     const response = await axios.get(REACT_APP_X_ACCESS_KEY);
 
-    if (response?.data?.status === 'success') {
-      let newArticlesArray = [];
-      for (let i = 0; i < 5; i++) {
-        const rItem = response.data.results[i];
-        newArticlesArray.push(rItem);
-   
-      }
-      setArticles(newArticlesArray);
+ if (response?.data?.status === "success") {
+   let newArticlesArray = [];
+   let iCount = 0;
+   for (let i = 0; i < response.data.results.length; i++) {
+     const rItem = response.data.results[i];
+     if (rItem.image_url && rItem.description) {
+       newArticlesArray.push(rItem);
+       iCount++;
+     }
 
-    }
-    /*
-    console.log(log_tag + ".useEffect--response.data = " + JSON.stringify(response.data, null, 4));
-    let newArticlesArray = [];
+     if (iCount >= 5) {
+       break;
+     }
+   }
+   setArticles(newArticlesArray);
+ }
+    
+   
+    {
+      /** let newArticlesArray = [];
     for (let i = 0; i<5;i++){
       newArticlesArray[i] = response.data.articles[i]
     }
     console.log(newArticlesArray);
-    setArticles(newArticlesArray)
-    */
+    setArticles(newArticlesArray) */
+    }
+    
   }
   getArticles()
 }, []);
