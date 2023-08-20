@@ -4,6 +4,7 @@ import Home from './screens/Home';
 import Company from './screens/Company'
 import Resources from './screens/Resources'
 import Contact from './screens/Contact'
+import Privacy from './screens/PrivacyStatement'
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path      = "/company" element   = {<Company/>}/>
         <Route path      = "/resources" element = {<Resources/>}/>
         <Route path      = "/contact" element   = {<Contact/>}/>
+        <Route path      = "/privacy" element   = {<Privacy/>}/>
         <Route component = {Error}/>
     </Routes>
   </BrowserRouter> 

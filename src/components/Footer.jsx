@@ -102,8 +102,8 @@ const Footer = () => {
             <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Claim</li>
             </Link>
-            <Link to={"/contact"} href="#name">
-              <li className="py-2 text-sm">Policy</li>
+            <Link to={"/privacy"}>
+              <li className="py-2 text-sm">Privacy Policy</li>
             </Link>
             <Link to={"/contact"} href="#name">
               <li className="py-2 text-sm">Terms</li>
