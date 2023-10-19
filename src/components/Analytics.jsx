@@ -31,12 +31,12 @@ const isDesktop = windowWidth > 1250;
           className="w-[300px]  lg:w-[500px] mx-auto my-4"
           src={Laptop}
           alt="/"
-          data-aos="fade-up"
+         
         />
         <div className="flex flex-col justify-center" id="crm">
           <p
             className=" md:text-2xl text-xl font-bold text-gray-700 pt-[100px] p-[20px] pb-[100px]"
-            data-aos="fade-up"
+            
           >
             "We are dedicated to the highest quality of technology and IT
             services delivered with ingenuity and freshness"
@@ -52,7 +52,7 @@ const isDesktop = windowWidth > 1250;
           <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
             Manage your business Centrally from one place
           </h1>
-          <p data-aos="fade-right">
+          <p>
             "Discover the perfect CRM solution for your business with our IT
             company's expertise. We create cutting-edge CRM Systems that are
             tailored to your unique needs, delivering affordability without
@@ -62,7 +62,7 @@ const isDesktop = windowWidth > 1250;
           </p>
           <button
             className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-            data-aos="flip-right"
+            
           >
             <Link to="/contact" href="#name">
               Enquire now
@@ -75,7 +75,7 @@ const isDesktop = windowWidth > 1250;
           <div className="flex flex-col justify-center">
             <p
               className=" md:text-2xl text-xl font-bold text-gray-700 pt-[100px] p-[20px] pb-[100px]"
-              data-aos="fade-up"
+              
             >
               "We turn your vision into online reality with expert software
               development and ongoing support."
@@ -88,7 +88,7 @@ const isDesktop = windowWidth > 1250;
             <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
               Empowering Digitel Success
             </h1>
-            <p data-aos="fade-right">
+            <p>
               "Transforming Visions into Reality: Your One-Stop Destination for
               Dynamic Websites, E-commerce Platforms, and Comprehensive Online
               Services. Experience top-tier software development, from
@@ -97,7 +97,7 @@ const isDesktop = windowWidth > 1250;
             </p>
             <button
               className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-              data-aos="flip-right"
+              
             >
               <Link to="/contact" href="#name">
                 Enquire now
@@ -109,7 +109,7 @@ const isDesktop = windowWidth > 1250;
             className="w-[300px] lg:w-[500px] mx-auto my-4"
             src={WebDev}
             alt="/"
-            data-aos="fade-right"
+           
           />
         </div>
       )}
@@ -119,9 +119,9 @@ const isDesktop = windowWidth > 1250;
             className="w-[300px] lg:w-[500px] mx-auto my-4 pt-20"
             src={WebDev}
             alt="/"
-            data-aos="fade-up"
+            
           />
-          <div className="flex flex-col justify-center" data-aos="fade-up">
+          <div className="flex flex-col justify-center">
             <p
               className=" md:text-2xl text-xl font-bold text-gray-700 pt-[100px] p-[20px] pb-[100px]"
               id="software"
@@ -137,7 +137,7 @@ const isDesktop = windowWidth > 1250;
             <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
               Empowering Digitel Success
             </h1>
-            <p data-aos="fade-right">
+            <p >
               "Transforming Visions into Reality: Your One-Stop Destination for
               Dynamic Websites, E-commerce Platforms, and Comprehensive Online
               Services. Experience top-tier software development, from
@@ -146,7 +146,7 @@ const isDesktop = windowWidth > 1250;
             </p>
             <button
               className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-              data-aos="flip-right"
+              
             >
               <Link to="/contact" href="#name">
                 Enquire now
@@ -160,9 +160,9 @@ const isDesktop = windowWidth > 1250;
           className="w-[300px] lg:w-[500px] mx-auto my-4"
           src={Gps}
           alt="/"
-          data-aos="fade-up"
+          
         />
-        <div className="flex flex-col justify-center" data-aos="fade-up">
+        <div className="flex flex-col justify-center">
           <p className=" md:text-2xl text-xl font-bold text-gray-700 pt-[100px] p-[20px] pb-[100px]">
             "We elevate your fleet management with precision: navigating
             boundaries, unleashing GPS potential."
@@ -178,7 +178,7 @@ const isDesktop = windowWidth > 1250;
           <h1 className="md:text-3xl sm:text-2xl text-1xl font-bold py-2">
             Manage your business Fleet with GPS
           </h1>
-          <p data-aos="fade-right">
+          <p >
             "Navigate Beyond Boundaries: Unleashing the Potential of GPS
             Systems. From cutting-edge GPS technology to tailored solutions, we
             empower seamless navigation and location-based services. Discover a
@@ -186,7 +186,7 @@ const isDesktop = windowWidth > 1250;
           </p>
           <button
             className="bg-[#606161] text-[#81cdba] w-[200px] rounded-md font-semibold my-6 mx-auto md:mx-0 py-3 "
-            data-aos="flip-right"
+            
           >
             <Link to="/contact" href="#name">
               Enquire now

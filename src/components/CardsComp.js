@@ -18,7 +18,7 @@ const CardsComp = () => {
       <div className="pt-10 max-w-[full] mx-auto grid lg:grid-cols-5 gap-8 lg:flex lg:justify-evenly">
         <div
           className="pb-20 md:pt-0 lg:pt-0 w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-white"
-          data-aos="fade-right"
+          
         >
           <img
             className="w-20 mx-auto mt-[-3rem]  bg-white"
@@ -38,7 +38,7 @@ const CardsComp = () => {
         </div>
         <div
           className="py-20 lg:pt-0 w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-white md:pt-28"
-          data-aos="fade-right"
+          
         >
           <img
             className="w-20 mx-auto mt-[-3rem]  bg-white"
@@ -60,7 +60,7 @@ const CardsComp = () => {
         </div>
         <div
           className=" py-20 md:pt-0 lg:pt-0 w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-white md:pt-28"
-          data-aos="fade-right"
+          
         >
           <img
             className="w-20 mx-auto mt-[-3rem]   bg-white"
@@ -82,7 +82,7 @@ const CardsComp = () => {
         </div>
         <div
           className="py-20 w-full lg:pt-0 shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-white md:pt-28"
-          data-aos="fade-right"
+          
         >
           <img
             className="w-20 mx-auto mt-[-3rem]  bg-white"
@@ -103,7 +103,7 @@ const CardsComp = () => {
         </div>
         <div
           className=" py-20 w-full lg:pt-0 shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-white md:pt-28"
-          data-aos="fade-right"
+         
         >
           <img
             className="w-20 mx-auto mt-[-3rem]  bg-white"

@@ -1,10 +1,12 @@
 1. Run [Docker Desktop] first
 
-2. docker build -t algotech-r .   (On the work root folder, you can find the "Dockerfile" by "ls Dockerfile" ) //build doker
+2. docker system prune --volumes
 
-3. docker save -o /tmp/algotech-r.tar algotech-r:latest //compressing the image and saving to tmp
+3. docker build -t algotech-r .   (On the work root folder, you can find the "Dockerfile" by "ls Dockerfile" ) //build doker
 
-4. scp /tmp/algotech-r.tar root@algotech.co.nz:/tmp   //upload compress file to server 
+4. docker save -o /tmp/algotech-r.tar algotech-r:latest //compressing the image and saving to tmp
+
+5. scp /tmp/algotech-r.tar root@algotech.co.nz:/tmp   //upload compress file to server 
 
 --  ssh root@algotech.co.nz
 

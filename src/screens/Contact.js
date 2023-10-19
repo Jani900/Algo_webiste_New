@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HeroContact from '../components/HeroContact'
@@ -7,6 +7,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Link as ScrollLink } from 'react-scroll';
 import emailjs from '@emailjs/browser'
+import ReactGA from 'react-ga';
+import { useLocation } from 'react-router-dom'
 
 
 const Contact = () => {
@@ -39,7 +41,15 @@ const Contact = () => {
   const [email1, setEmail1] = useState("");
   const [message1, setMessage1] = useState("");
 
+  const location = useLocation();
+
   //-----------------Functions-----------------//
+
+  useEffect(() => {
+    // Initialize google analytics page view tracking non-interaction
+    ReactGA.pageview(location.pathname);
+  }, [location]);
+
 
 
   const handleCaptchaVerify = (value) => {
@@ -47,6 +57,14 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+
+    // Initialize google analytics event tracking interaction
+       ReactGA.event({
+         category: "Contact",
+         action: "Clicked on Submit button",
+         label: "Contact",
+       });
+
     e.preventDefault();
     setLoading(true);
     captchaRef.current.reset();
@@ -177,7 +195,11 @@ const Contact = () => {
               }}
             />
           </div>
-          <div className="mb-4">
+          <div
+            className={`mb-4  ${
+              isFieldFocused("name") ? "border-[#81cdba]" : "#000"
+            }`}
+          >
             <label
               htmlFor="email"
               className="lg:w-[650px] sm:w-[400px] block mb-1 font-semibold"
@@ -197,7 +219,11 @@ const Contact = () => {
               value={email1}
             />
           </div>
-          <div className="mb-4">
+          <div
+            className={`mb-4  ${
+              isFieldFocused("name") ? "border-[#81cdba]" : "#000"
+            }`}
+          >
             <label
               htmlFor="message"
               className="lg:w-[650px] sm:w-[400px] block mb-1 font-semibold"
@@ -222,7 +248,7 @@ const Contact = () => {
           <ReCAPTCHA
             className="mb-4"
             ref={captchaRef}
-        sitekey={ DEF_SITEKKEY_PRODUCT }
+            sitekey={DEF_SITEKKEY_PRODUCT}
             onChange={handleCaptchaVerify}
           />
 

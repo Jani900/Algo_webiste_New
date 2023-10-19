@@ -7,6 +7,7 @@ import {Link,useMatch,useResolvedPath} from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { data } from 'autoprefixer';
+import ReactGA from 'react-ga';
 
 const Navbar = () => {
 
@@ -18,8 +19,6 @@ useEffect(() => {
   Aos.refresh();
   }
 }, [nav]);
-
-
 
 
   const handleNav = () => {
@@ -37,16 +36,32 @@ useEffect(() => {
       </div>
 
       <ul className="hidden md:flex" data-aos="fade-right">
-        <CustomLink to="/" className="p-4  hover:text-[#81cdba]">
+        <CustomLink
+          to="/"
+          className="p-4  hover:text-[#81cdba]"
+          
+        >
           Home
         </CustomLink>
-        <CustomLink to="/company" className="p-4  hover:text-[#81cdba]">
+        <CustomLink
+          to="/company"
+          className="p-4  hover:text-[#81cdba]"
+          
+        >
           Company
         </CustomLink>
-        <CustomLink to="/resources" className="p-4  hover:text-[#81cdba]">
+        <CustomLink
+          to="/resources"
+          className="p-4  hover:text-[#81cdba]"
+         
+        >
           Resources
         </CustomLink>
-        <CustomLink to="/contact" className="p-4  hover:text-[#81cdba]">
+        <CustomLink
+          to="/contact"
+          className="p-4  hover:text-[#81cdba]"
+          
+        >
           Contact
         </CustomLink>
       </ul>
@@ -55,10 +70,7 @@ useEffect(() => {
         {nav ? (
           <AiOutlineClose size={30} color="#81cdba" />
         ) : (
-          <AiOutlineMenu
-            size={30}
-            color="#81cdba"
-          />
+          <AiOutlineMenu size={30} color="#81cdba" />
         )}
       </button>
 
@@ -73,6 +85,7 @@ useEffect(() => {
           to="/"
           className="flex justify-center p-6 border-b  hover:text-[#81cdba]"
           data-aos={nav ? "fade-up" : ""}
+          
         >
           Home
         </CustomLink>
