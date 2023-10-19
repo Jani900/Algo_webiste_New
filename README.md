@@ -2,6 +2,8 @@
 
 2. docker system prune --volumes
 
+3. rm -fr ./node
+
 3. docker build -t algotech-r .   (On the work root folder, you can find the "Dockerfile" by "ls Dockerfile" ) //build doker
 
 4. docker save -o /tmp/algotech-r.tar algotech-r:latest //compressing the image and saving to tmp
